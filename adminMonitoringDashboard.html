@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Smart Crowd Management</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          primary: "#137fec",
+          "background-light": "#f6f7f8",
+          "background-dark": "#101922",
+        },
+        fontFamily: {
+          display: ["Public Sans"],
+        },
+      },
+    },
+  };
+</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+
+<!-- Top Navbar -->
+<header class="w-full bg-background-dark border-b border-white/10">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 text-primary">
+        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+      </div>
+      <h1 class="text-lg md:text-xl font-bold text-white/90">Smart Crowd Management</h1>
+    </div>
+    <nav class="flex items-center gap-6">
+      <a class="text-sm font-medium text-primary hover:text-white/90 transition-colors" href="adminMonitoringDashboard.html">Dashboard</a>
+      <a class="text-sm font-medium text-white/60 hover:text-primary transition-colors" href="adminBookingManagement.html">Booking Management</a>
+      <a class="text-sm font-medium text-white/60 hover:text-primary transition-colors" href="adminEmergencyManagement.html">Emergency Management</a>
+      <a class="text-sm font-medium text-white/60 hover:text-primary transition-colors" href="adminLogin.html">Logout</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+  <!-- Dashboard Header -->
+  <div class="flex items-center justify-between mb-6">
+    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white">Dashboard</h2>
+    <button class="lg:hidden p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+
+  <!-- Real-time Overview -->
+  <section class="mb-8">
+    <h3 class="text-lg sm:text-xl font-semibold text-gray-700 dark:text-gray-200 mb-4">Real-time Overview</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white dark:bg-background-dark p-4 sm:p-6 rounded-lg shadow-md">
+        <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Total Visitors</p>
+        <p class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white mt-2">12,345</p>
+      </div>
+      <div class="bg-white dark:bg-background-dark p-4 sm:p-6 rounded-lg shadow-md">
+        <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Average Dwell Time</p>
+        <p class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white mt-2">2h 15m</p>
+      </div>
+      <div class="bg-white dark:bg-background-dark p-4 sm:p-6 rounded-lg shadow-md">
+        <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Crowd Density</p>
+        <p class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white mt-2">Medium</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CCTV Feeds -->
+  <section class="mb-8">
+    <h3 class="text-lg sm:text-xl font-semibold text-gray-700 dark:text-gray-200 mb-4">CCTV Feeds</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="w-full aspect-video bg-cover bg-center rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKiMdgNZXQIzeLPD9t_eNwkbLFWrefJSOzyES3a3ugcGp8_mWjhFR7JzUoJlGaKCqu2UI9oHFbGh8fs9KKRuDT-qS_eH2-pIAh-rnuP2coFmbVUiaJF5qAiiwnIKafLjk_328IvbdS1qoaKS2D_7n9UbMsCZCnSrC0GT6ter23Qnm514gbV6ov-Ti_obongIBFmaXndke_9YFtataF5Mq5bUG9Yzn32Hg95bLEahHSdoA3J6_ugLT_Azq3qiVzFuFeoxgqWux-Tw');"></div>
+      <div class="w-full aspect-video bg-cover bg-center rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCq5hbl1VWvhgVPmxSquvKaSWmLC2XFf3aoMzrJfmWCSGpmIt3t10_1zPoEmXTAiDjsVWfBLm6rdV5t0hR0DXM3rYE56xLpf-DTMOySTq2rI3cxiibtiI0czRWonUdygCwK-tIoSZAq5j0KSvdpGM4eVAauCTeSDxh1yBDd2QWFjWDkXlJCUj-UMbyNXWOQAqbQfsvAtPrV4VISxcuHRaNowPESOhfntFLMOSC_pLXvA0v5MyZ8d3QUNJI84i7fqFdx5tp50m9btQ');"></div>
+      <div class="w-full aspect-video bg-cover bg-center rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCR5ADMoyn0TLg_X3xFcO7ukbwX5BInADd54gF5wDx1_alzxFAFSBTYsWKkIDs_9-bXSaNhQrNsm3XTBZVtyZZJSeSt6GbosWaENtoW9a7aC_ZcNeRyX9Ve1IApROOXVnN2c8-fTHFDn4XdmXty9GToDjmmeG0M4DqSo9t8BwUq57T9tcDGbdpFUaxdUU9NyXqnuTIh8dy7hzBgTYW7k0Nij2YYMKRTQv1rlSHQByHO3b4LJlJzNOZL9IH-xGzNi7_e_7p_2Wadxw');"></div>
+      <div class="w-full aspect-video bg-cover bg-center rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6LkXrspEpLiK0FFajC8kJeDrhb1MBPYT9q58D-OVTp4S5xMh3YC4LT6ZDEkfje3xZilJp4cXwngoArgRfWebozGW6eXGVaK3tuY_q2AA8UV72IR-Z-ehUF0chiuM0rY-tqNvh3o37feSvf7v8B42M11ZTfTKi05OnBliovvDUqtD_jvEOshVsa8lkspznfAQcmipg1q7cr48uX0KdfKfHDk3CUqKuNog5gOBT8O6Dg8AqZuYtXYqIryz6E_NWm6OBYgjO4sYsKQ');"></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

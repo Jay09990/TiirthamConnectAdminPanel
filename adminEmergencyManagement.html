@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Smart Crowd Management</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          primary: "#137fec",
+          "background-light": "#f6f7f8",
+          "background-dark": "#101922",
+        },
+        fontFamily: { display: ["Public Sans"] },
+        borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+      },
+    },
+  };
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+
+<!-- Top Navbar -->
+<header class="w-full bg-background-light dark:bg-background-dark border-b border-black/10 dark:border-white/10 sticky top-0 z-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 text-primary">
+        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+      </div>
+      <h1 class="text-lg md:text-xl font-bold text-black/90 dark:text-white/90">Smart Crowd Management</h1>
+    </div>
+    <nav class="flex items-center gap-6">
+      <a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary transition-colors" href="adminMonitoringDashboard.html">Dashboard</a>
+      <a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary transition-colors" href="adminBookingManagement.html">Booking Management</a>
+      <a class="text-sm font-medium text-primary dark:text-primary transition-colors" href="adminEmergencyManagement.html">Emergency Management</a>
+      <a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary transition-colors" href="adminLogin.html">Logout</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8">
+
+  <!-- Page Header -->
+  <div>
+    <h1 class="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">Alerts & Notifications</h1>
+    <p class="text-sm lg:text-base text-gray-600 dark:text-gray-400 mt-1">Manage emergency alerts, send mass notifications, and track SOS signals from pilgrims in real-time.</p>
+  </div>
+
+  <!-- Emergency Alerts -->
+  <section>
+    <h2 class="text-xl lg:text-2xl font-bold mb-4 text-gray-900 dark:text-white">Emergency Alerts</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="bg-white dark:bg-gray-800/50 rounded-lg shadow overflow-hidden p-4 sm:p-6">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-4">
+          <span class="material-symbols-outlined text-red-500 !text-3xl sm:!text-4xl">crisis_alert</span>
+          <div>
+            <h3 class="font-bold text-base sm:text-lg text-gray-900 dark:text-white">High Alert: Unusually High Crowd Density</h3>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Crowd density in the main prayer area has exceeded safe levels. Immediate action required.</p>
+          </div>
+        </div>
+        <div class="aspect-video bg-cover bg-center rounded-lg mb-4" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD7fy_RKUcGk-3UEyRJsuAFxdmHpoI-L8ayd-iaxAr0TSB7cv_gb1pVoj6Bl10o0lO5hy7gbXpu4xPLvTalLeQ7nSIcrgrzOuVc2rJNqLqBZ06INT8sjpaf35RAt-ssxxmh0hf-6EHjbHmHcPkz7zhu6tBV8TkO8b1qte2HrWPs0-x-A3m_5DQE27rJKY-rJA_qHCycrHIm_cv-iQ_yx77RcxIRNKHS42HX9HwhBKalgPHjsR7dwnMImFvJmGzad2n71v4Ih5sK1w");'></div>
+        <button class="w-full sm:w-auto bg-primary/10 text-primary hover:bg-primary/20 dark:hover:bg-primary/20 rounded font-semibold px-4 py-2 text-sm">View Details</button>
+      </div>
+      <div class="bg-white dark:bg-gray-800/50 rounded-lg shadow overflow-hidden p-4 sm:p-6">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-4">
+          <span class="material-symbols-outlined text-yellow-500 !text-3xl sm:!text-4xl">warning</span>
+          <div>
+            <h3 class="font-bold text-base sm:text-lg text-gray-900 dark:text-white">Medium Alert: Lost Pilgrim Reported</h3>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">A pilgrim has been reported missing near the central plaza. Search and assistance teams dispatched.</p>
+          </div>
+        </div>
+        <div class="aspect-video bg-cover bg-center rounded-lg mb-4" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDpHIa-6X2-jmfRxqtBTvYUO0XfNCEPYh9DPd06DhxtPwUUt13qMRK9bt4ZoKQ01kZPASqHeyDAuwUmJivkUbbPu1T2LWt35Np2Wb78BvXT5oHKeNNx8YcuFr-1LWf8YB5rhRML3UDrN0Pu4wcTzL4K8eZQm3LeARgrijp7UXtPmTf4NjqdrNqTiaVayE6n9U6Ogkmxw99oj1K4uK_UNgzrgQzsD3UY9NDJ1v_aS-WTVPV0h5gdYxwI2IQwb5FNqq079LmXCwJEmQ");'></div>
+        <button class="w-full sm:w-auto bg-primary/10 text-primary hover:bg-primary/20 dark:hover:bg-primary/20 rounded font-semibold px-4 py-2 text-sm">View Details</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mass Notifications -->
+  <section>
+    <h2 class="text-xl lg:text-2xl font-bold mb-4 text-gray-900 dark:text-white">Mass Notifications</h2>
+    <div class="bg-white dark:bg-gray-800/50 rounded-lg shadow p-4 sm:p-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <textarea class="form-textarea w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-primary focus:border-primary min-h-[120px]" placeholder="Enter your message here..."></textarea>
+        <div class="space-y-4">
+          <select class="form-select w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark text-gray-900 dark:text-white focus:ring-primary focus:border-primary">
+            <option>Select Target Audience</option>
+            <option>All Pilgrims</option>
+            <option>Pilgrims in Zone A</option>
+            <option>Staff & Volunteers</option>
+          </select>
+          <button class="w-full bg-primary text-white rounded-lg font-bold px-6 py-3 text-sm tracking-wide hover:bg-primary/90">Send Notification</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOS Signals -->
+  <section>
+    <h2 class="text-xl lg:text-2xl font-bold mb-4 text-gray-900 dark:text-white">SOS Signals</h2>
+    <div class="bg-white dark:bg-gray-800/50 rounded-lg shadow overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left min-w-[500px]">
+          <thead class="text-sm text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-700">
+            <tr>
+              <th class="px-4 py-3 font-medium">Pilgrim ID</th>
+              <th class="px-4 py-3 font-medium">Location</th>
+              <th class="px-4 py-3 font-medium">Timestamp</th>
+              <th class="px-4 py-3 font-medium text-center">Status</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm text-gray-800 dark:text-gray-200">
+            <tr class="border-b border-gray-200 dark:border-gray-700">
+              <td class="px-4 py-3 font-medium text-gray-900 dark:text-white">12345</td>
+              <td class="px-4 py-3">Central Plaza</td>
+              <td class="px-4 py-3">10:30 AM</td>
+              <td class="px-4 py-3 text-center">
+                <span class="inline-flex items-center rounded-full bg-red-100 dark:bg-red-900/50 px-3 py-1 text-xs font-medium text-red-700 dark:text-red-300">Active</span>
+              </td>
+            </tr>
+            <tr class="border-b border-gray-200 dark:border-gray-700">
+              <td class="px-4 py-3 font-medium text-gray-900 dark:text-white">67890</td>
+              <td class="px-4 py-3">East Gate</td>
+              <td class="px-4 py-3">11:15 AM</td>
+              <td class="px-4 py-3 text-center">
+                <span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/50 px-3 py-1 text-xs font-medium text-green-700 dark:text-green-300">Resolved</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-900 dark:text-white">54321</td>
+              <td class="px-4 py-3">West Plaza</td>
+              <td class="px-4 py-3">12:00 PM</td>
+              <td class="px-4 py-3 text-center">
+                <span class="inline-flex items-center rounded-full bg-red-100 dark:bg-red-900/50 px-3 py-1 text-xs font-medium text-red-700 dark:text-red-300">Active</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>
